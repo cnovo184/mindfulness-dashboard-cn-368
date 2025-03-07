@@ -1,109 +1,102 @@
-/* Diagnostic Styling */
-* {
-  outline: 2px dotted gray;
-} 
-
-
 /* background image */
 body {
-    background: #F5E8D7;
-    background-image: url('https://www.deanteamchicago.com/wp-content/uploads/sites/84/2018/12/article-home-and-garden-content-121818.jpg');
-    background-size: cover;
-  }
+  background: #B1F2FF;
+}
 
 /* reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*  center vertically and horizontally  */
+  background: #B1F2FF;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.2em;
+  color:purple;
+}
+
+/* Bento container */
+.bento-container {
+  background: #C8E6C9;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 1200px;
+  padding: 1.5rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.75rem;
+
+  /* optional. fixed aspect ratio   */
+  /*   aspect-ratio: 16/9; */
+}
+
+.bento-item {
+  background: #A7D8F0;
+  padding: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-  body {
-    /*  center vertically and horizontally  */
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Quicksand', sans-serif;
-    font-size:1.2em;
-    color:black;
-  }
-  
+  border-radius: 16px;  /* Smooth, rounded corners */
+  box-shadow: 0px 4px 12px rgba(255, 183, 77, 0.15);
+  transition: all 0.3s ease-in-out;
+
+  /* ui to indicate interaction */
+  cursor: pointer;
+}
+
+.bento-item:hover {
+  background: #FFF8DC;
+  transform: translateY(-4px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 8px 18px rgba(255, 189, 230, 0.6);
+}
+
+/* Featured items */
+.feature-1 {
+  grid-column: span 1;
+  background: #FFF3B0;
+}
+
+.feature-2 {
+  grid-column: span 1;
+  background: #D4C2FC;
+}
+
+.feature-3 {
+  grid-row: span 1;
+  background: #D4C2FC;
+}
+
+/* Responsive "tablet" size */
+@media (max-width: 768px) {
   .bento-container {
-    background: #A67B5B;
-    border-radius: 16px;
-    width: 90%;
-    max-width: 1200px;
-    padding: 1.5rem;
-  
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 0.75rem;
-  
-    /* optional. fixed aspect ratio   */
-    /*   aspect-ratio: 16/9; */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    aspect-ratio: auto;
   }
-  
-  .bento-item {
-    background: #CD5334;
-    padding: 1.5rem;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    border-radius: 16px;  /* Smooth, rounded corners */
-    box-shadow: 0px 4px 10px rgba(255, 150, 50, 0.3); /* Warm fire-like glow */
-    transition: all 0.3s ease-in-out;
-  
-    /* ui to indicate interaction */
-    cursor: pointer;
-  }
-  
-  .bento-item:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-4px);
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 8px 18px rgba(234, 189, 230, 0.6);
-  }
-  
-  /* Featured items */
-  .feature-1 {
-    grid-column: span 1;
-    grid-row: span 1;
-    background: #FEB062;
-  }
-  
-  .feature-2 {
-    grid-column: span 1;
-    background: #FFF07A;
-  }
-  
+
+  .feature-1,
+  .feature-2,
   .feature-3 {
+    grid-column: span 1;
     grid-row: span 1;
-    background: #FFF07A;
   }
-  
-  /* Responsive "tablet" size */
-  @media (max-width: 768px) {
-    .bento-container {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
-      aspect-ratio: auto;
-    }
-  
-    .feature-1,
-    .feature-2,
-    .feature-3 {
-      grid-column: span 1;
-      grid-row: span 1;
-    }
+}
+
+/* Responsive "mobile" size */
+@media (max-width: 480px) {
+  .bento-container {
+    grid-template-columns: 1fr;
   }
-  
-  /* Responsive "mobile" size */
-  @media (max-width: 480px) {
-    .bento-container {
-      grid-template-columns: 1fr;
-    }
-  }
+}
