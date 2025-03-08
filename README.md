@@ -1,4 +1,13 @@
 # Mindful Dashboard
+The Mindful Dashboard is a web-based tool designed to promote mindfulness and awareness of time and nature. It provides key daily insights to encourage a balanced and reflective lifestyle. The dashboard includes the following features:
+
+- Current Time & Date: Displays the real-time clock and today's date for easy reference.
+
+- Days Until Easter: A countdown to the upcoming Easter holiday, serving as a seasonal reminder.
+
+- Daily Nature Walk Streak Counter: Tracks consecutive days of nature walks to encourage consistent outdoor activity.
+
+- Spokane Lilac Festival Age Tracker: Displays the number of years since the Spokane Lilac Festival began in 1938, offering a historical perspective on a beloved annual event.
 
 ## Why? 
 * Introductiont to core JavaScript concepts
