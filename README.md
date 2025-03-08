@@ -8,7 +8,8 @@
 * Explore pro/cons of JS libraries, plugins, frameworks, etc.
 
 ## Citations
-* List your citations here
+* This project was assisted by ChatGPT, an AI language model developed by OpenAI.
+  OpenAI. (2025). ChatGPT (March 7 version) [Large language model]. https://openai.com
 
 ## How?
 * Simply click on "Use this template" button to create a new repository

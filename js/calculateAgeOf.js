@@ -1,17 +1,25 @@
-// Function
-const calculateAgeOf = (birthDate) => {
-  // Convert birth date string to Date object
-  const birth = new Date(birthDate);
+// Function to calculate the age of the Spokane Lilac Festival
+const calculateFestivalAge = () => {
+  const festivalStart = new Date("1938-05-21");
   const today = new Date();
 
-  // Get years
-  let age = today.getFullYear() - birth.getFullYear();
+  let age = today.getFullYear() - festivalStart.getFullYear();
 
-  // Check if birthday hasn't occurred this year
-  const monthDiff = today.getMonth() - birth.getMonth();
-  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+  const monthDiff = today.getMonth() - festivalStart.getMonth();
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < festivalStart.getDate())) {
     age--;
   }
 
   return age;
+};
+
+// Ensure script runs after the DOM is loaded
+window.onload = () => {
+  // Get HTML element
+  const ageOfEvent = document.querySelector('.ageOfEvent');
+
+  // Ensure the element exists before setting textContent
+  if (ageOfEvent) {
+    ageOfEvent.textContent = `The Spokane Lilac Festival is ${calculateFestivalAge()} years old.`;
+  }
 };
